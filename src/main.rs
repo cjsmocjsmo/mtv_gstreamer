@@ -6,7 +6,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let pipeline = gst::parse::launch(
         r#"
-        playbin uri=file:///home/pimedia/testvid.mp4 video-sink="videoscale ! video/x-raw,width=1200,height=800 ! xvimagesink"
+        playbin uri=file:///home/charliepi/testvid.mp4 video-sink="videoscale ! video/x-raw,width=1200,height=800 ! xvimagesink"
     "#,
     )?
     .downcast::<gst::Pipeline>()
